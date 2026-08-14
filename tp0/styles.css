@@ -83,4 +83,6 @@ main li{
     z-index:1000;
     background-image: url("assets/cina1.png");
     background-repeat: no-repeat;
+    transform: scale(1.5);
+    transform-origin: top left;
 }
