@@ -7,7 +7,27 @@
     <title>Heitor Augusto Botelho</title>
 </head>
 <body>
+    <audio src="audios/base_audio2.mpeg" id="music" autoplay loop></audio>
     <div id="img_prota"></div>
+    <div id="guide">
+        <div id="guide_popup">
+        
+            <h1>Olá, visitante!</h1>
+            <p>Este é um site feio interiamente em HTML/CSS/JS puro, sem IA, os sprites foram feitos no aseprite e os áudios no flstudio, tudo nessa semana (12/8 até 19/8) por mim (Heitor). USE NO COMPUTADOR (a versão de celular ainda não foi feita, talvez nunca seja) e preferencialmente com fone.</p>
+            <div class="img_banner"></div>
+            <p>
+                Controles:
+                <ul>
+                    <li><span class="button_tip">W</span>   andar para cima</li>
+                    <li><span class="button_tip">A</span>   andar para esquerda</li>
+                    <li><span class="button_tip">S</span>   andar para baixo</li>
+                    <li><span class="button_tip">D</span>   andar para direita</li>
+                </ul>
+            </p>
+            <button id="start">Iniciar</button>
+            
+        </div>
+    </div>
     <header>
         <h1>Heitor Augusto Botelho</h1>
         <section class = "sobre">
@@ -136,5 +156,6 @@
         </ul>
     </footer>
     <script src="script.js"></script>
+    <script src="button_events.js"></script>
 </body>
 </html>

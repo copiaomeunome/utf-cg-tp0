@@ -11,6 +11,8 @@ let ANIMATION = {
     LEFT:{left:0,top:320,width:112,height:80,frames:4},
     RIGHT:{left:0,top:240,width:112,height:80,frames:4}
 }
+let walkSound = new Audio("audios/walk.mp3");
+walkSound.loop = true;
 class Player{
     constructor(){
         this.x = 0;
@@ -25,6 +27,10 @@ class Player{
     update(){
         this.img.style.left= this.x + "px";
         this.img.style.top= this.y + "px";
+        window.scrollTo({
+            left: this.x - window.innerWidth / 2,
+            top: this.y - window.innerHeight / 2
+        });
     }
     animateWalk() {
         let now = Date.now();
@@ -103,7 +109,11 @@ class Player{
         if(!(dx!=0 || dy!=0)){
             this.frame = 0;
             this.animation = "default";
+            walkSound.pause();
+            walkSound.currentTime = 0;
         }
+        else if(walkSound.paused) walkSound.play();
+        
         this.animateWalk();
         this.update();
     }
