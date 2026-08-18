@@ -27,7 +27,7 @@ header p, footer p{margin: 5px 0;}
 .sobre h1{
     margin: 0;
     font-size: 2rem;
-    color: #5a5c72;
+    color: #e7e7ec;
 }
 .sobre p{
     text-align: justify;
@@ -131,4 +131,17 @@ main li{
     display: block;
     margin: 20px auto 0;
 }
+header {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 30px;
+}
 
+header img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
